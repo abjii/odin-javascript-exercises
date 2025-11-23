@@ -24,15 +24,22 @@ const power = function (a, b) {
   return Math.pow(a, b);
 };
 
-const factorial = function (a) {
+// const factorial = function (a) {
+//   if (a === 0) return 1;
+//   else {
+//     let res = 1;
+//     for (let i = 1; i <= a; i++) {
+//       res *= i;
+//     }
+//     return res;
+//   }
+// };
+
+//recursive solution
+const factorial = function fact(a) {
   if (a === 0) return 1;
-  else {
-    let res = 1;
-    for (let i = 1; i <= a; i++) {
-      res *= i;
-    }
-    return res;
-  }
+  res = a * fact(a - 1);
+  return res;
 };
 
 // Do not edit below this line
